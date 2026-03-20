@@ -1,6 +1,6 @@
 package de.roskenet.propsdemo;
 
-import de.roskenet.application.Application;
+import de.roskenet.application.SomeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringPropertiesDemoApplication implements CommandLineRunner {
 
     @Autowired
-    private Application application;
+    private SomeService someService;
 
     public static void main(String[] args) {
         SpringApplication.run(SpringPropertiesDemoApplication.class, args);
@@ -18,6 +18,6 @@ public class SpringPropertiesDemoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        application.doSomething();
+        someService.doSomething();
     }
 }
