@@ -1,3 +1,5 @@
+# This file is in the starter jar
+
 spring:
   application:
     name: spring-properties-demo

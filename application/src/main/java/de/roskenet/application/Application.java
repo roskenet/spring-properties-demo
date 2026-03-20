@@ -1,13 +1,15 @@
 package de.roskenet.application;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-@SpringBootApplication
+@Component
 public class Application {
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
+    @Value("${some.property}")
+    private String someProperty;
 
+    public void doSomething() {
+        System.out.println("Value of some.property: " + someProperty);
+    }
 }

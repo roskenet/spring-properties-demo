@@ -1,3 +1,1 @@
-spring:
-  application:
-    name: application
+# This file is in the application jar
